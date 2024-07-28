@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="wrapper">
+        <h1>Weather App</h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>Your Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>           
+        </div>
+        
+        <div class="weather-container">
+            <!-- grant location access -->
+            <div class="sub-container grant-location-container">
+                <img src="./images/location.png" width="80" height="80" loading="lazy" alt="">
+                <p>grant Location Access</p>
+                <p>Allow Access to get weather Information</p>
+                <button class="btn" data-grantAccess type="submit">Grant Access</button>
+
+            </div>
+            <!-- search form -->
+            <div class="form-container" data-searchForm>
+                <input type="text" placeholder="Search for City..." data-searchInput>
+                <button class="btn" >
+                    <img src="./images/search.png" width="20" height="20" loading="lazy" alt="">
+                </button>
+            </div>
+            <!-- loading screen -->
+            <div class="sub-container loading-container">
+                <img src="images/loading.gif" width="150" height="150" alt="">
+                <p>Loading</p>
+            </div>
+
+            <!-- show weather info -->
+            <div class="sub-container user-info-container">
+                <!-- city name and flag -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img data-countryIcon>
+                </div>
+            <!-- weather description  -->
+                <p data-weatherDesc></p>
+            <!-- weather icon -->
+                <img data-weatherIcon>
+            <!-- temp  -->
+                <p data-temp></p>
+                <button choose-temp class="cels"> celsius  </button>
+                <div class="parameter-container">
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="images/feel1.png" alt="">
+                        <p class="head">Feels Like</p>
+                        <p data-feelLike></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="parameter">
+                        <img src="images/maxTemp.png" alt="">
+                        <p class="head">Max Temp</p>
+                        <p data-tempMax></p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="parameter">
+                        <img src="images/minTemp.png" alt="">
+                        <p class="head">Min Temp</p>
+                        <p data-tempMin></p>
+
+                    </div>
+                </div>
+                <!-- 3 cards - paramater -->
+                <div class="parameter-container">
+                    <!-- card 1 -->
+                    <div class="parameter">
+                        <img src="images/wind.png" alt="">
+                        <p class="head">Windspeed</p>
+                        <p data-windspeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="parameter">
+                        <img src="images/humidity.png" alt="">
+                        <p class="head">Humidity</p>
+                        <p data-humidity></p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="parameter">
+                        <img src="images/cloud.png" alt="">
+                        <p class="head">Clouds</p>
+                        <p data-cloudiness></p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="forecast">
+              
+        
+                
+        
+            </div>
+
+        </div>
+
+        <div class="error">
+            <img src="images/not-found.png" height="400px"  width="400px">
+            <p>Location not found</p>
+        </div>
+        
+     </div>
+     <script src="script.js"></script>
+</body>
+</html>
